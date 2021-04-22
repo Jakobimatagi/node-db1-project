@@ -9,9 +9,10 @@ const getAll = () => {
 
 const getById = id => {
   // DO YOUR MAGIC
-  return db('accounts')
-  .where({ id })
-  .first()
+  return db('*')
+  .from("accounts")
+  .where("id", id)
+  .limit(1)
 
 }
 
